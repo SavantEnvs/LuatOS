@@ -1,0 +1,9 @@
+project: savantenvs/LuatOS
+target: fuzz_httpsrv_request
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_httpsrv_request/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_httpsrv_request
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_httpsrv_request/fuzz_httpsrv_request.dict

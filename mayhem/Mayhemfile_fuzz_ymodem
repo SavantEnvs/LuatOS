@@ -1,0 +1,9 @@
+project: savantenvs/LuatOS
+target: fuzz_ymodem
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ymodem/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ymodem
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_ymodem/fuzz_ymodem.dict

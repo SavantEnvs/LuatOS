@@ -1,0 +1,9 @@
+project: savantenvs/LuatOS
+target: fuzz_sms_pdu
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sms_pdu/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sms_pdu
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_sms_pdu/fuzz_sms_pdu.dict

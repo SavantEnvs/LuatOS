@@ -1,0 +1,4 @@
+GET /static/a.css?v=1 HTTP/1.0
+Connection: keep-alive
+Accept: */*
+

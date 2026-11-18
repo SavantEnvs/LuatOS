@@ -1,0 +1,9 @@
+project: savantenvs/LuatOS
+target: fuzz_mqtt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mqtt/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mqtt
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_mqtt/fuzz_mqtt.dict

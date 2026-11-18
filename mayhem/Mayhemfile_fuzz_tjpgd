@@ -1,0 +1,8 @@
+project: savantenvs/LuatOS
+target: fuzz_tjpgd
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tjpgd/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tjpgd
+    libfuzzer: true

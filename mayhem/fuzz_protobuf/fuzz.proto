@@ -1,0 +1,12 @@
+syntax = "proto3";
+enum Color { RED = 0; GREEN = 1; BLUE = 2; }
+message Inner { int32 a = 1; string s = 2; repeated Inner kids = 3; }
+message Fuzz {
+  int32 i32 = 1; int64 i64 = 2; uint32 u32 = 3; uint64 u64 = 4;
+  sint32 s32 = 5; sint64 s64 = 6; fixed32 f32 = 7; fixed64 f64 = 8;
+  sfixed32 sf32 = 9; sfixed64 sf64 = 10; float fl = 11; double db = 12;
+  bool b = 13; string str = 14; bytes by = 15; Color color = 16;
+  Inner inner = 17; repeated int32 rep = 18; repeated string reps = 19;
+  repeated Inner kids = 20; map<string, int32> m = 21; map<int32, Inner> mi = 22;
+  oneof choice { int32 c1 = 23; string c2 = 24; }
+}
